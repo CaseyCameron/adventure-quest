@@ -29,7 +29,7 @@
     - link to results.js, update styles
 
 
-## Sign up page (app.js)
+## Sign up page (local-storage-utils)
 Overview: put username and class into local storage
 1) needs a const USER = 'USER' to create the local storage string
 2) needs a getUser function
@@ -43,6 +43,24 @@ Overview: put username and class into local storage
     - increment user.gold
     - user.complete[questId] = true;
     - setUser(user) aka string it and set in local storage
+
+## Sign up page part 2 (app.js)
+1) get setUser
+2) create a form with doc.qSelector('form')
+3) add submit button with form.addEventListener('submit', (event) =>)
+    {event.preventDefault()}
+4) make a new form with const data = new FormData(form)
+    - const name = data.get('name') --get the name from whatever is entered?
+    - const userClass = data.get('user-class')
+5) for TDD create a user object user ={
+    hp: 235,
+    gold: 0,
+    name: name,
+    class: userClass,
+    compelted {}
+}
+6) setUser(user) (string it and send to local storage)
+7) window.location = './map'
 
 ## Quest page
 1) needs:
@@ -70,7 +88,7 @@ Overview: put username and class into local storage
     radio.value = choice.id (I believe this is the id name of each avail choice, like negotiate, fight, run))
     - label.append(choice.description, radio) what's this?
     - form.append(label)
-8) create a button --- button = cod.createEle('button')
+8) create a button --- button = doc.createEle('button')
     -assign the button textContent to submit
     -append the button to the form
     -addEventListener('submit', (event) => { event.preventDefault()}) to stop archaic behavior
@@ -96,3 +114,6 @@ Overview: put username and class into local storage
 
 ## Results page
 1) FUTURE PLANNING
+
+## Local storage utils
+1)
