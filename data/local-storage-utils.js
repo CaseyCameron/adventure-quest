@@ -1,3 +1,4 @@
+import quests from './data.js';
 const USER = 'USER';
 
 export function getUser(){
@@ -19,4 +20,13 @@ export function updateUserData(questId, choice){
     user.gold += choice.gold;
     user.completed[questId] = true; //adds to the user objected created in app.js
     setUser(user);
+}
+
+export function questsCompleteCheck(){
+    const user = getUser(); //get user from local storage
+    for (let quest of quests){ //for each quest in quest object
+        if (!user.completed[quest.id])
+            return false;
+    }
+    return true;
 }

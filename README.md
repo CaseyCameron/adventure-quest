@@ -103,6 +103,7 @@ Overview: put username and class into local storage
     - redirect user to map with window.location = '../map'
 9) append this stuff to the html section
     - section.append(h2, image, form)
+10) render the header
 
 ## Maps page
 1) import quests
@@ -112,9 +113,39 @@ Overview: put username and class into local storage
     - anchorTag.textContent = quest.title (how is it getting the title? It doesn't live in quests it lives in the monster, dragon, and treasure object -- quests stores those objects)
     - anchorTag.href = `../quest/?=${quest.id}`  this takes the quest.id and sticks it in the url
     - append these links to the page with section.append(anchorTag)
+4) onLoad check for questsCompleteCheck and player is alive
+    - get the user
+    - if user.hp <= 0 OR questsCompleteCheck is true
+        - redirect to results
+5) render the header
 
 ## Results page
-1) FUTURE PLANNING
+1) render the header
+2) get the user
+3) if user.gold < 15 goldStatus is poor
+    - under 40 goldStatus is modest
+    - over 40 goldStatus is rich
+4) if user.health is <=0 user is dead
+    - under 15 hp user is frail
+    - over 35 hp user is healthy
+5) get the section element (should be empty)
+6) if user is alive
+    - use `${aliveGoldMessages[goldStatus]}. ${hpMessages[hpStatus]}`
+    -else use  `${deadGoldMessages[goldStatus]}. ${hpMessages[hpStatus]}`
+    -set the section.textContent to this
+7) add a play again button
+    - create a button
+    - add an event listener
+    - clear localStorage
+    - redirect to '../'
+
+
+
 
 ## Local storage utils
-1)
+1) questsCompleteCheck
+    - getUser out of storage so we can check quests
+    - for quest of quests
+        - if the user has not completed the quests return false
+        - use the quest.id under the completed key of the user object
+    - otherwise return true
