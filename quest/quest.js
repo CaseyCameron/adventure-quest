@@ -10,7 +10,7 @@ console.log(quest);
 
 const questImage = document.createElement('img');
 const questTitle = document.createElement('h1');
-questImage.src = `../assets/quests/$questImage.image}`;
+questImage.src = `../assets/quests/${questImage.image}`;
 questTitle.textContent = quest.title;
 
 const questForm = document.createElement('form');
