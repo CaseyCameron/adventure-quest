@@ -1,16 +1,16 @@
 import { findById } from '../utils.js';
 import quests from '../data/data.js';
-import { getUser, updateUserData } from '../data/local-storage-utils.js';
+//import { getUser, updateUserData } from '../data/local-storage-utils.js';
 
 const section = document.querySelector('section');
 const urlParams = new URLSearchParams(window.location.search);
 const questId = urlParams.get('id');
-quest = findById(quests, questId); //find our quest in data.js
-console.log(quest);
+const quest = findById(quests, questId); //find our quest in data.js 
+console.log(quest); 
 
 const questImage = document.createElement('img');
 const questTitle = document.createElement('h1');
-questImage.src = `../assets/quests/${questImage.image}`;
+questImage.src = `../assets/quests/${quest.image}`;
 questTitle.textContent = quest.title;
 
 const questForm = document.createElement('form');
@@ -20,7 +20,7 @@ for (let choice of quest.choices){ //populate a form, entry for each quest
     radioQuestChoice.type = 'radio';
     radioQuestChoice.name = 'choice';
     radioQuestChoice.value = choice.id; //the choice id stored
-    label.append(choice.description, radio); //the choice description printed out
+    label.append(choice.description, radioQuestChoice); //the choice description printed out
     questForm.append(label);
 }
 
