@@ -7,6 +7,7 @@
     - monsters, dragon, treasure
     - the above contains the id name, title of quest, map link location data, bkg img, description, 3 choices with id names, descriptions, and results, and state chages (hp, gold)
     - Quests object (or array?)
+3) create utils.js with FindById
 
 ## HTML
 0) Keep in mind the Quest and Results page header should have
@@ -57,7 +58,7 @@ Overview: put username and class into local storage
     gold: 0,
     name: name,
     class: userClass,
-    compelted {}
+    completed {}
 }
 6) setUser(user) (string it and send to local storage)
 7) window.location = './map'
