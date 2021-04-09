@@ -13,9 +13,10 @@ export function setUser(user){
 
 //send a quest id from the URL (dragon, monster, treasure) and the user's
 //choice to the quest
-export function updateUserChoice(questId, choice){
+export function updateUserData(questId, choice){
     const user = getUser();
-    //update local storage (user) with the data from choice
     user.hp += choice.hp;
     user.gold += choice.gold;
+    user.completed[questId] = true; //adds to the user objected created in app.js
+    setUser(user);
 }
