@@ -67,7 +67,7 @@ Overview: put username and class into local storage
 1) needs:
     - findById
     - quests object
-    - updateUserGivenChoice
+    - updateUserData
     - getUser
 2) Grab the section element
 3) Grab the URLSearchParam from window.location.search (search bar)
@@ -109,7 +109,7 @@ Overview: put username and class into local storage
 2) get access to the section to house the map const section = doc.qSelector('section')
 3) for loop that for each quest in quests
     - const anchorTag = document.createEl('a') (#anchors)
-    - anchorTag.textContent = quest.title (how is it getting the title? It doesn't live in quests it lives in the monster, dragon, and treasure object)
+    - anchorTag.textContent = quest.title (how is it getting the title? It doesn't live in quests it lives in the monster, dragon, and treasure object -- quests stores those objects)
     - anchorTag.href = `../quest/?=${quest.id}`  this takes the quest.id and sticks it in the url
     - append these links to the page with section.append(anchorTag)
 
