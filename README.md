@@ -42,7 +42,7 @@ Overview: put username and class into local storage
     - getUser() get the object in local storage
     - increment user.hp
     - increment user.gold
-    - user.complete[questId] = true;
+    - user.complete[questId] = true; --this questId is from the URL
     - setUser(user) aka string it and set in local storage
 
 ## Sign up page part 2 (app.js)
@@ -53,7 +53,7 @@ Overview: put username and class into local storage
 4) make a new form with const data = new FormData(form)
     - const name = data.get('name') --get the name from whatever is entered?
     - const userClass = data.get('user-class')
-5) for TDD create a user object user ={
+5) create a user object to store ={
     hp: 235,
     gold: 0,
     name: name,
