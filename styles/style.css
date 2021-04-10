@@ -49,6 +49,15 @@ section {
     display: flex;
 }
 
+.avatars{
+    display: flex;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    font-weight: bolder;
+    justify-content: space-evenly;
+    border: 1x solid black;
+}
+
 .choice-result{
     background-color: var(--color5);
     width: 1000px;
@@ -66,18 +75,25 @@ section {
 
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
 }
 
-header > div {
+header > h1 {
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--color3);
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 2rem;
+}
+
+div {
     display: flex;
     justify-content: flex-end;
     background-color: var(--color3);
-    height: var(--header-height);
-    box-shadow: var(--shadow);
+    font-size: 1.5rem;
 }
 
 footer {
@@ -92,6 +108,12 @@ label input{
     flex-direction: column;
 }
 
+.class-image{
+    display: flex;
+    justify-content: flex-end;
+    width: 20px;
+    height: 20px;
+}
 
 h2 {
     font-size: 1.8rem;

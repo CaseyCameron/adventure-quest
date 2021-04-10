@@ -64,6 +64,12 @@ Overview: put username and class into local storage
 7) window.location = './map'
 8) add a race to choose
 
+## Sign up Additions
+1) Add the class icons
+    - create a <content>
+    - labels for Wizard, Fighter, Cleric, Monk
+    - input type radio name classtype value wizard (fighter, cleric, monk)
+
 ## Quest page
 1) needs:
     - findById
