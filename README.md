@@ -62,6 +62,7 @@ Overview: put username and class into local storage
 }
 6) setUser(user) (string it and send to local storage)
 7) window.location = './map'
+8) add a race to choose
 
 ## Quest page
 1) needs:
@@ -104,6 +105,16 @@ Overview: put username and class into local storage
 9) append this stuff to the html section
     - section.append(h2, image, form)
 10) render the header
+
+## Quest Page 2
+1) Setup the generated HTML so it can be hidden with a function on button click
+    - hide title, img, description, radio, Go button
+    - need to link it to css
+2) Setup a new button that is hidden at start but is revealed on button click
+    - display questResult.textContent.
+    - display a new button that returns to map
+    - need to link them to css
+3) make the hide stuff function in utils.js
 
 ## Maps page
 1) import quests

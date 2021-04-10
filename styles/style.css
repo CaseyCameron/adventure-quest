@@ -45,6 +45,25 @@ section {
     border: solid 2px var(--color1);
 }
 
+.quest-section{
+    display: flex;
+}
+
+.choice-result{
+    background-color: var(--color5);
+    width: 1000px;
+    max-width: 80%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+    margin-top: var(--gutter);
+    margin-bottom: var(--gutter);
+    border: solid 2px var(--color1);
+}
+
 header {
     display: flex;
     justify-content: center;
