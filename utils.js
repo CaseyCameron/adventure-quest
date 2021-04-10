@@ -12,3 +12,8 @@ export function renderHeader(){
     profileDiv.textContent = `Name: ${user.name}, Class: ${user.class}, HP: ${user.hp}, GP: ${user.gold}`;
     header.appendChild(profileDiv);
 }
+
+export function renderChoiceResult(hideClass, showClass){
+    hideClass.style.display = 'none';
+    showClass.style.display = 'flex';
+}

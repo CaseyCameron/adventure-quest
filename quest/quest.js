@@ -1,10 +1,11 @@
-import { findById, renderHeader } from '../utils.js';
+import { findById, renderHeader, renderChoiceResult } from '../utils.js';
 import quests from '../data/data.js';
-import { getUser, updateUserData } from '../data/local-storage-utils.js';
+import { updateUserData } from '../data/local-storage-utils.js';
 
 renderHeader();
 
 const section = document.querySelector('section');
+const content = document.querySelector('content');
 const urlParams = new URLSearchParams(window.location.search);
 const questId = urlParams.get('id');
 const quest = findById(quests, questId); //find our quest in data.js 
@@ -34,7 +35,6 @@ questForm.append(button);
 
 const questResult = document.createElement('result');
 
-
 //update user data and return to map or results
 questForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -43,11 +43,15 @@ questForm.addEventListener('submit', (event) => {
     const userChoice = findById(quest.choices, choiceId); //store matching choice from quests
 
     updateUserData(questId, userChoice);
+    renderChoiceResult(section, content, returnButton);
     questResult.textContent = userChoice.result;
-    alert(JSON.stringify(getUser(), true, 2));
+});
+
+const returnButton = document.createElement('button');
+returnButton.textContent = 'Venture forth!';
+returnButton.addEventListener('click', () => {
     window.location = '../map';
 });
 
-
-
-section.append(questTitle, questImage, questDescription, questForm, questResult);
+section.append(questTitle, questImage, questDescription, questForm);
+content.append(questResult, returnButton);
