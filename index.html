@@ -21,14 +21,35 @@
             <h2>Seek glory and riches in a life of adventure!</h2>
           <form>
               <label>
-                  Name: 
-                  <input name ="user-name" />
+                  Your Hero's Name: 
+                  <input name ="user-name" required/>
               </label>
-              <label>
-                  Class: 
-                  <input name ="user-class" />
-              </label>
-              <button class="start-button">Go Forth and Adventure!</button>
+              <fieldset>
+                <legend>Choose your hero's class:</legend>
+                <p class="avatars">
+                    <label>
+                        <input type="radio" name="user-class" required value="wizard">
+                        <img src="assets/avatars/wizard.png" name="class-image">
+                        Wizard
+                    </label>
+                    <label>
+                        <input type="radio" name="user-class" required value="fighter">
+                        <img src="assets/avatars/fighter.png">
+                        Fighter
+                    </label>
+                    <label>
+                        <input type="radio" name="user-class" required value="cleric">
+                        <img src="assets/avatars/cleric.png">
+                        Cleric
+                    </label>
+                    <label>
+                        <input type="radio" name="user-class" required value="monk">
+                        <img src="assets/avatars/monk.png">
+                        Monk
+                    </label>
+                </p>
+            </fieldset>
+            <button class="start-button">Go Forth and Adventure!</button>
           </form>
         </section>
     </main>
