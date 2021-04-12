@@ -27,9 +27,18 @@ if (user.hp <= 0){
 }
 
 const section = document.querySelector('section');
+const button = document.createElement('button');
+button.textContent = 'Play again?';
 
 if (hpStatus !== 'dead'){
-    section.textContent = `${aliveGoldMessages[goldStatus]}. ${hpMessages[hpStatus]}`;
+    section.textContent = `${hpMessages[hpStatus]}. ${aliveGoldMessages[goldStatus]}.`;
 } else {
-    section.textContent = `${deadGoldMessages[goldStatus]}. ${hpMessages[hpStatus]}`;
+    section.textContent = `${hpMessages[hpStatus]}. ${deadGoldMessages[goldStatus]}.`;
 }
+
+button.addEventListener('click', () => {
+    localStorage.clear();
+    window.location = '../index.html';
+});
+
+section.append(button);
