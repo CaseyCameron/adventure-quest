@@ -35,7 +35,7 @@ const monsters = {
         id: 'run',
         description: 'Run away like good Sir Robin',
         result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
+            As you make a dash for the door a giant spider descends and takes a bite of flesh,
             causing 50 hp damage.
         `,
         hp: -50,
