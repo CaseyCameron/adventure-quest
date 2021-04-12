@@ -1,4 +1,4 @@
-import { getUser } from '../data/local-storage-utils.js';
+import { getUser } from './data/local-storage-utils.js';
 
 export function findById(array, id){
     return array.find(item => item.id === id);
@@ -14,7 +14,7 @@ export function renderHeader(){
     const classImage = document.createElement('img');
     classImage.src = `../assets/avatars/${user.class}.png`;
     classImage.classList.add('header-img');
-    
+
     const profileDiv = document.createElement('div');
     profileDiv.classList.add('header-player-info');
     profileDiv.textContent = `Name: ${user.name}, Class: ${user.class}, HP: ${user.hp}, GP: ${user.gold}`;
