@@ -23,5 +23,5 @@ form.addEventListener('submit', (event) => {
     //set the initialized user into local storage
     setUser(initUser);
     //after submit send user to the map page
-    window.location.href = './map/index.html';
+    window.location = './map/index.html';
 });
