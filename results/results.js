@@ -27,6 +27,7 @@ if (user.hp <= 0){
 }
 
 const section = document.querySelector('section');
+section.style = 'font-weight: bolder;';
 const button = document.createElement('button');
 button.textContent = 'Play again?';
 
