@@ -9,14 +9,14 @@ form.addEventListener('submit', (event) => {
     //Get the input from user-name and user-class inputs
     const userName = userData.get('user-name');
     const userClass = userData.get('user-class');
-    const classImage = userData.get('class-image');
+    //const classImage = userData.get('class-image');
 
     const initUser = {
         hp: 35,
         gold: 0, 
         name: userName,
         class: userClass,
-        classImage: classImage.src,
+        //classImage: classImage.src,
         completed: {}
     };
 

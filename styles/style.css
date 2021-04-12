@@ -47,6 +47,13 @@ section {
 
 .quest-section{
     display: flex;
+    /*position: relative;
+    background-image: url(../assets/map.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 90vw;
+    height: calc(90vw * 642 / 900);
+    margin: auto;8?*/
 }
 
 .avatars{
@@ -136,6 +143,21 @@ p {
     margin: var(--gutter);
 }
   
+
+.map-section{
+    background-image: url('../assets/map.jpeg');
+    position: absolute;
+    top: 100px;
+    width: 650px;
+    height: 500px;
+}
+
+.quest{
+    position: absolute;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
 footer {
     position: fixed;
     width: 100%;

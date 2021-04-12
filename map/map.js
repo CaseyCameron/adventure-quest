@@ -13,8 +13,17 @@ if (user.hp <= 0 || questsCompleteCheck()){
 const mapSection = document.querySelector('section');
 
 for (let quest of quests){
-    const anchorTag = document.createElement('a');
-    anchorTag.textContent = quest.title;
-    anchorTag.href = `../quest/?id=${quest.id}`;
-    mapSection.append(anchorTag);
+    let elementTag = null;
+    if (user.completed[quest.id]){
+        elementTag = document.createElement('span');
+        elementTag.textContent = 'Complete: ' + quest.title;
+    } else {
+        elementTag = document.createElement('a');
+        elementTag.textContent = quest.title;
+    }  
+    
+    elementTag.href = `../quest/?id=${quest.id}`;
+    elementTag.classList.add('quest');
+    elementTag.style = `top: ${quest.map.top}; left: ${quest.map.left};`;
+    mapSection.append(elementTag);
 }
