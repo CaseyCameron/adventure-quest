@@ -1,25 +1,12 @@
 
-body {
-    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-    /* --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1); */
-
-    /* --color1: hsla(45, 86%, 83%, 1);
-    --color2: hsla(135, 65%, 98%, 1);
-    --color3: hsla(315, 37%, 86%, 1);
-    --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
-    
+body {    
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: darkkhaki;
 }
 
 main {
@@ -31,7 +18,6 @@ main {
 }
 
 section {
-    background-color: var(--color5);
     width: 1000px;
     max-width: 80%;
     display: flex;
@@ -47,13 +33,6 @@ section {
 
 .quest-section{
     display: flex;
-    /*position: relative;
-    background-image: url(../assets/map.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 90vw;
-    height: calc(90vw * 642 / 900);
-    margin: auto;8?*/
 }
 
 .avatars{
@@ -66,7 +45,6 @@ section {
 }
 
 .choice-result{
-    background-color: var(--color5);
     width: 1000px;
     max-width: 80%;
     display: none;
@@ -81,10 +59,11 @@ section {
 }
 
 header {
+    position: relative;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
     justify-content: right;
-    background-color: var(--color3);
+    background-color: goldenrod;
     height: var(--header-height);
     box-shadow: var(--shadow);
 }
@@ -92,9 +71,9 @@ header {
 header > h1 {
     display: flex;
     flex-direction: flex-start;
-    background-color: var(--color3);
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: 2.3rem;
+    font-weight: bolder;
 }
 
 .header-img{
@@ -128,6 +107,10 @@ label input{
     justify-content: flex-end;
     width: 20px;
     height: 20px;
+}
+
+img{
+    max-height: 400px;
 }
 
 h2 {
@@ -177,22 +160,22 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
-  
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
+
+@keyframes pulse {
+20% {
+    transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
+}
+
+40% {
+    transform: rotate3d(10, 10, -10, 50deg) scale(1);
+}
+
+60% {
+    transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
     }
 
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
+80% {
+    transform: rotate3d(10, 10, 10, 50deg) scale(1);
+}
 
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
-
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
-
-  }
+}

@@ -1,4 +1,4 @@
-import { setUser } from '../data/local-storage-utils.js';
+import { setUser } from './data/local-storage-utils.js';
 
 const form = document.querySelector('form');
 
@@ -23,5 +23,5 @@ form.addEventListener('submit', (event) => {
     //set the initialized user into local storage
     setUser(initUser);
     //after submit send user to the map page
-    window.location.href = './map/index.html'
+    window.location.href = './map/index.html';
 });
