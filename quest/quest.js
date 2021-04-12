@@ -44,6 +44,7 @@ questForm.addEventListener('submit', (event) => {
 
     updateUserData(questId, userChoice);
     renderChoiceResult(section, content, returnButton);
+    questResult.style = 'font-weight: bolder;';
     questResult.textContent = userChoice.result;
 });
 

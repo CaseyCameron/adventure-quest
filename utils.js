@@ -17,11 +17,16 @@ export function renderHeader(){
 
     const profileDiv = document.createElement('div');
     profileDiv.classList.add('header-player-info');
-    profileDiv.textContent = `Name: ${user.name}, Class: ${user.class}, HP: ${user.hp}, GP: ${user.gold}`;
+    const className = capitalizeClass(user.class);
+    profileDiv.textContent = `Name: ${user.name}, Class: ${className}, HP: ${user.hp}, GP: ${user.gold}`;
     header.append(title, classImage, profileDiv);
 }
 
 export function renderChoiceResult(hideClass, showClass){
     hideClass.style.display = 'none';
     showClass.style.display = 'flex';
+}
+
+function capitalizeClass(className){
+    return className.charAt(0).toUpperCase() + className.slice(1);
 }
