@@ -13,7 +13,10 @@ export function renderHeader(){
 
     const classImage = document.createElement('img');
     classImage.src = `../assets/avatars/${user.class}.png`;
+    classImage.classList.add('header-img');
+    
     const profileDiv = document.createElement('div');
+    profileDiv.classList.add('header-player-info');
     profileDiv.textContent = `Name: ${user.name}, Class: ${user.class}, HP: ${user.hp}, GP: ${user.gold}`;
     header.append(title, classImage, profileDiv);
 }
